@@ -3,8 +3,6 @@ var inquirer = require('inquirer');
 var ChooseWord = require('./words');
 var Letters = require('./letters');
 
-
-
 function start() {
     inquirer.prompt({
         name: "begin",
@@ -25,8 +23,7 @@ function start() {
                 message: "Guess a letter:"
             }).then(function (answer) {
                 console.log(answer);
-                var letters = new UpdateLetters();
-                letters.UpdateLetters();
+                words.checkLetters();
             });
         }
         else {
